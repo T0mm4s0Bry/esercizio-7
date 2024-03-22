@@ -1,3 +1,4 @@
+
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
@@ -9,11 +10,8 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  premi(index:number){
-    var Player = this.player[index];
-    window.open(Player.link);
-  }
-player = [
+
+pokemon = [
   {posizione : '1', nickname : 'soaz', team:'fnatic', immagine:'https://media.trackingthepros.com/profile/p145.png', ruolo:'top lane', eta:'30', nazionalita:'fr', link:'https://liquipedia.net/leagueoflegends/SOAZ'},
   {posizione : '2', nickname : 'jankos', team:'h2k', immagine:'../../assets/TJankos_2024_Split_1.webp', ruolo:'jungle', eta:'28', nazionalita:'pl', link:'https://liquipedia.net/leagueoflegends/Jankos'},
   {posizione : '3', nickname : 'powerofevil', team:'misfits gaming', immagine:'../../assets/PowerOfEvil_2022_Split_2.webp', ruolo:'mid lane', eta:'26', nazionalita:'de', link:'https://liquipedia.net/leagueoflegends/PowerOfEvil'},
