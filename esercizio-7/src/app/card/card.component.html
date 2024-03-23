@@ -4,14 +4,31 @@
 <img src="https://media.pokemoncentral.it/wiki/3/31/Pok%C3%A9mon_Serie_Nero_e_Bianco_logo.png" style="width: 100px; margin-left: auto; margin-right: auto;">
 <br>
 <h3 class="container" align="center">La città principale è Austropoli: questa è caratterizzata da molti edifici e grattacieli, tutti esplorabili dal giocatore. Al di fuori di Austropoli, Unima resta comunque prevalentemente industrializzata con la presenza di varie fabbriche e ferrovie in diversi settori.</h3>
-
-<div class="card" style="width:400px" *ngFor="let element of pokemon">
-  <img class="card-img-top" src="{{element.immagine}}" alt="Card image">
+<div class="container row">
+<div class="card col-md-4" style="width:400px; margin-left: auto; margin-right: auto;"  *ngFor="let element of pokemon">
+  <img class="card-img-top" src="https://media.pokemoncentral.it/wiki/3/37/Homem0498.png" alt="Card image">
   <div class="card-body">
-    <h4 class="card-title">tepig</h4>
-    <p class="card-text"></p>
-    <a href="#" class="btn btn-primary"></a>
+    <h4 class="card-title" align="center">Tepig</h4>
+    <p class="card-text" align="center">Tepig</p>
+    <a href="#" class="btn btn-primary" >più informazioni</a>
   </div>
+</div>
+<div class="card col-md-4 " style="width:400px; margin-left: auto; margin-right: auto;" *ngFor="let element of pokemon">
+  <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/501.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title" align="center">Oshawott</h4>
+    <p class="card-text" align="center">Oshawott</p>
+    <a href="#" class="btn btn-primary">più informazioni</a>
+  </div>
+</div>
+<div class="card col-md-4" style="width:400px;  margin-left: auto; margin-right: auto;" *ngFor="let element of pokemon">
+  <img class="card-img-top" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/495.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title" align="center">Snivy</h4>
+    <p class="card-text" align="center">Snivy</p>
+    <a href="#" class="btn btn-primary">più informazioni</a>
+  </div>
+</div>
 </div>
 
   
