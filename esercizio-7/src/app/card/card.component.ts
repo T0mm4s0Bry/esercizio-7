@@ -12,7 +12,8 @@ import { Component } from '@angular/core';
 export class CardComponent {
 
 pokemon = [
-  {posizione : '1', nickname : 'soaz', team:'fnatic', immagine:'https://media.trackingthepros.com/profile/p145.png', ruolo:'top lane', eta:'30', nazionalita:'fr', link:'https://liquipedia.net/leagueoflegends/SOAZ'},
-  
+  { nome : 'Tepig', immagine:'https://media.pokemoncentral.it/wiki/3/37/Homem0498.png'},
+  { nome : 'Oshawott', immagine:'https://assets.pokemon.com/assets/cms2/img/pokedex/full/501.png'},
+  { nome : 'Snivy', immagine:'https://assets.pokemon.com/assets/cms2/img/pokedex/full/495.png'},
 ]
 }
