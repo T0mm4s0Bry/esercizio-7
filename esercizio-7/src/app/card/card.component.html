@@ -4,19 +4,18 @@
 <h1 style="font-family: POKEMON ;" align="center" >Pokémon Nero e Bianco</h1>
 <img src="https://media.pokemoncentral.it/wiki/3/31/Pok%C3%A9mon_Serie_Nero_e_Bianco_logo.png" style="width: 100px; margin-left: auto; margin-right: auto;">
 <br>
-</div>
+</div>4
 <div *ngIf="!(pokemon[0].control || pokemon[1].control || pokemon[2].control); then thenBlock1; else elseBlock"></div>
-
 <ng-template #thenBlock1>
   <h3 class="container" align="center">La città principale è Austropoli: questa è caratterizzata da molti edifici e grattacieli, tutti esplorabili dal giocatore. Al di fuori di Austropoli, Unima resta comunque prevalentemente industrializzata con la presenza di varie fabbriche e ferrovie in diversi settori.</h3>
   <div class="container">
     <div class="row">
-      <div class="col-md-4" style="width:400px; margin-left: auto; margin-right: auto;"  *ngFor="let element of pokemon">
+      <div class="col-md-4" style="width:400px; margin-left: auto; margin-right: auto;"  *ngFor="let element of pokemon index as i">
       <div class="card mb-4" >
         <img class="card-img-top" src="{{element.immagine}}" alt="Card image">
         <div class="card-body">
           <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{element.nome}}</h4>
-          <a href="#" class="btn btn-primary" (click)="bottone(element)" style="width:200px; margin-left: 20%; margin-right: 20%; ">più informazioni</a>
+          <a href="#" class="btn" (click)="bottone(element)" style="width:200px; margin-left: 20%; margin-right: 20%; "[ngClass]="{'tepig' : pokemon[i].nome=='TEPIG','oshawott' : pokemon[i].nome=='OSHAWOTT','snivy' : pokemon[i].nome=='SNIVY'}">più informazioni</a>
         </div>
       </div>
     </div>
@@ -28,26 +27,56 @@
   <div *ngIf="pokemon[0].control; then thenBlock2; else elseBlock2"></div>
 
   <ng-template #thenBlock2>
-   <div class="background0">
+    <div class="background0">
     <br>
-    <br>
-    <div class="container" style="width:400px;">
-      <div class="card mb-5"  >
-        <img class="card-img-top" src="{{pokemon[0].immagine}}" alt="Card image">
-        <div class="card-body" style="background-color: orangered;">
-          <h4 class="card-title"style="font-family: POKEMON ;" align="center">{{pokemon[0].nome}}</h4>
-          <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[0].evoluzioni}}</p>
-          <p class="card-text"><strong>DOVE TROVARLO :</strong>{{pokemon[0].zona}}</p>
-          <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[0].tipo}}</p>
-          <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[0].primaabilita}}</p>
-          <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[0].abilitaspeciale}}</p>
-          <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[0].debolezze}}</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+            <img class="card-img-top" src="{{pokemon[0].immagine}}" alt="Card image">
+            <div class="card-body" style="background-color: orangered;">
+              <h4 class="card-title" style="font-family: POKEMON;" align="center">{{pokemon[0].nome}}</h4>
+              <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[0].evoluzioni}}</p>
+              <p class="card-text"><strong>DOVE TROVARLO :</strong>{{pokemon[0].zona}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[0].tipo}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[0].primaabilita}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[0].abilitaspeciale}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[0].debolezze}}</p>
+            </div>
+          </div>
         </div>
-    </div>  
-   </div>
+        <div class="col-sm-4">
+          <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+            <img class="card-img-top" src="{{pokemon[0].immagine1}}" alt="Card image">
+            <div class="card-body" style="background-color: orangered;">
+              <h4 class="card-title" style="font-family: POKEMON;" align="center">{{pokemon[0].nome1}}</h4>
+              <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[0].evoluzioni1}}</p>
+              <p class="card-text"><strong>DOVE TROVARLO :</strong>{{pokemon[0].zona1}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[0].tipo1}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[0].primaabilita1}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[0].abilitaspeciale1}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[0].debolezze1}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+            <img class="card-img-top" src="{{pokemon[0].immagine2}}" alt="Card image">
+            <div class="card-body" style="background-color: orangered;">
+              <h4 class="card-title" style="font-family: POKEMON;" align="center">{{pokemon[0].nome2}}</h4>
+              <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[0].evoluzioni2}}</p>
+              <p class="card-text"><strong>DOVE TROVARLO :</strong>{{pokemon[0].zona2}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[0].tipo2}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[0].primaabilita2}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[0].abilitaspeciale2}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[0].debolezze}2}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn " style="margin-left: 45%; background-color: orangered;" (click)="home()">torna alla home</button>
   </div>
-    <br>
-    <br>
   </ng-template>
 
   <ng-template #elseBlock2>
@@ -57,23 +86,54 @@
      <div class="background1">
       <br>
       <br>
-      <div class="container" style="width:400px;">
-        <div class="card mb-5"  >
-          <img class="card-img-top" src="{{pokemon[1].immagine}}" alt="Card image">
-          <div class="card-body" style="background-color: skyblue;">
-            <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[1].nome}}</h4>
-            <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[1].evoluzioni}}</p>
-            <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[1].zona}}</p>
-          <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[1].tipo}}</p>
-          <p class="card-text"><strong>PRIMA ABILITÀ:</strong>{{pokemon[0].primaabilita}}</p>
-          <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[1].abilitaspeciale}}</p>
-          <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[1]. debolezze}}</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+              <img class="card-img-top" src="{{pokemon[1].immagine}}" alt="Card image">
+              <div class="card-body" style="background-color: skyblue;">
+                <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[1].nome}}</h4>
+                <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[1].evoluzioni}}</p>
+                <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[1].zona}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[1].tipo}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ:</strong>{{pokemon[1].primaabilita}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[1].abilitaspeciale}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[1]. debolezze}}</p>
+              </div>
+            </div>
           </div>
+          <div class="col-sm-4">
+            <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+              <img class="card-img-top" src="{{pokemon[1].immagine1}}" alt="Card image">
+              <div class="card-body" style="background-color: skyblue;">
+                <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[1].nome1}}</h4>
+                <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[1].evoluzioni1}}</p>
+                <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[1].zona1}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[1].tipo1}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ:</strong>{{pokemon[1].primaabilita1}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[1].abilitaspeciale1}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[1]. debolezze1}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+              <img class="card-img-top" src="{{pokemon[1].immagine2}}" alt="Card image">
+              <div class="card-body" style="background-color: skyblue;">
+                <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[1].nome2}}</h4>
+                <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[1].evoluzioni2}}</p>
+                <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[1].zona2}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[1].tipo2}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ:</strong>{{pokemon[1].primaabilita2}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[1].abilitaspeciale2}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[1]. debolezze2}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-     </div>
-      <br>
-    <br>
+      <button type="button" class="btn" style="margin-left: 45%; background-color: skyblue;" (click)="home()">torna alla home</button>
+    </div>
     </ng-template>
 
     <ng-template #elseBlock3>
@@ -82,23 +142,54 @@
        <div class="background2">
         <br>
         <br>
-        <div class="container" style="width:400px;">
-          <div class="card mb-5"  >
-            <img class="card-img-top" src="{{pokemon[2].immagine}}" alt="Card image">
-            <div class="card-body" style="background-color: green;">
-              <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[2].nome}}</h4>
-              <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[2].evoluzioni}}</p>
-              <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[2].zona}}</p>
-          <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[2].tipo}}</p>
-          <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[0].primaabilita}}</p>
-          <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[2].abilitaspeciale}}</p>
-          <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[2]. debolezze}}</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+                <img class="card-img-top" src="{{pokemon[2].immagine}}" alt="Card image">
+                <div class="card-body" style="background-color: green;">
+                  <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[2].nome}}</h4>
+                  <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[2].evoluzioni}}</p>
+                  <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[2].zona}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[2].tipo}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[2].primaabilita}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[2].abilitaspeciale}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[2]. debolezze}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+                <img class="card-img-top" src="{{pokemon[2].immagine1}}" alt="Card image">
+                <div class="card-body" style="background-color: green;">
+                  <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[2].nome1}}</h4>
+                  <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[2].evoluzioni1}}</p>
+                  <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[2].zona1}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[2].tipo1}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[2].primaabilita1}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[2].abilitaspeciale1}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[2]. debolezze1}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+                <img class="card-img-top" src="{{pokemon[2].immagine2}}" alt="Card image">
+                <div class="card-body" style="background-color: green;">
+                  <h4 class="card-title" style="font-family: POKEMON ;" align="center">{{pokemon[2].nome2}}</h4>
+                  <p class="card-text"><strong>EVOLUZIONI :</strong>{{pokemon[2].evoluzioni2}}</p>
+                  <p class="card-text "><strong>DOVE TROVARLO :</strong>{{pokemon[2].zona2}}</p>
+              <p class="card-text"><strong>TIPOLOGIA :</strong>{{pokemon[2].tipo2}}</p>
+              <p class="card-text"><strong>PRIMA ABILITÀ :</strong>{{pokemon[2].primaabilita2}}</p>
+              <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[2].abilitaspeciale2}}</p>
+              <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[2]. debolezze2}}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-       </div>
-        <br>
-    <br>
+        <button type="button" class="btn" style="margin-left: 45%; background-color: green;" (click)="home()">torna alla home</button>
+      </div>
       </ng-template>
     </ng-template>
   </ng-template>
