@@ -1,0 +1,11 @@
+.sfondo{
+    background-image: url("../assets/ash.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 800px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    margin-bottom: 20;
+    z-index: -1;
+}
