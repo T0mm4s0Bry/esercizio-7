@@ -28,7 +28,7 @@
   <div *ngIf="pokemon[0].control; then thenBlock2; else elseBlock2"></div>
 
   <ng-template #thenBlock2>
-    <div class="background">
+   <div class="background0">
     <div class="container" style="width:400px;">
       <div class="card mb-5"  >
         <img class="card-img-top" src="{{pokemon[0].immagine}}" alt="Card image">
@@ -41,7 +41,7 @@
           <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[0]. debolezze}}</p>
         </div>
     </div>
-    </div>
+   </div>
   </div>
     <br>
     <br>
@@ -51,6 +51,7 @@
     <div *ngIf="pokemon[1].control; then thenBlock3; else elseBlock3"></div>
 
     <ng-template #thenBlock3>
+     <div class="background1">
       <div class="container" style="width:400px;">
         <div class="card mb-5"  >
           <img class="card-img-top" src="{{pokemon[1].immagine}}" alt="Card image">
@@ -64,6 +65,7 @@
           </div>
       </div>
       </div>
+     </div>
       <br>
     <br>
     </ng-template>
@@ -71,6 +73,7 @@
     <ng-template #elseBlock3>
       <div *ngIf="pokemon[2].control;then thenBlock4"></div>
       <ng-template #thenBlock4>
+       <div class="background2">
         <div class="container" style="width:400px;">
           <div class="card mb-5"  >
             <img class="card-img-top" src="{{pokemon[2].immagine}}" alt="Card image">
@@ -82,8 +85,9 @@
           <p class="card-text"><strong>ABILITÀ SPECIALE :</strong>{{pokemon[2].abilitaspeciale}}</p>
           <p class="card-text"><strong>DEBOLEZZE :</strong>{{pokemon[2]. debolezze}}</p>
             </div>
+          </div>
         </div>
-        </div>
+       </div>
         <br>
     <br>
       </ng-template>

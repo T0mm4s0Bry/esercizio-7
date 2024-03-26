@@ -1,5 +1,35 @@
-.background{
-    background-image: url("../../assets/pokemon\ bianco\ e\ nero.webp");
+.card {
+    background-color: transparent;
+  }
+  
+
+
+.background0{
+    background-image: url("../../assets/zona\ lavica.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      
+      
+}
+.background1{
+    background-image: url("../../assets/zona\ glaciale.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      
+      
+}
+.background2{
+    background-image: url("../../assets/foresta\ 2.jpg");
         background-size: cover;
         background-position: center center;
         height: 100vh;
