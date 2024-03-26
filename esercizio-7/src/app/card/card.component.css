@@ -1,5 +1,5 @@
 .card {
-    background-color: transparent;
+    background-color: transparent ;
   }
   
 
@@ -39,4 +39,12 @@
         z-index: -1;
       
       
+}
+@font-face {
+    font-family: POKEMON;
+    src: url(../../assets/Pokemon\ Solid.ttf);
+}
+@font-face {
+    font-family: poke;
+    src: url(../../assets/Pokemon\ Hollow.ttf);
 }
